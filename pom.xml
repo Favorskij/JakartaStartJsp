@@ -36,23 +36,28 @@
     <dependencies>
 
 <!--        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
-<!--        Общие зависимости для GlassFish и TomCat-->
+<!--        Приложение на основе сервлетов на Glassfish-->
 
+<!--        Если вы используете сервер приложений Glassfish, вам не нужно ничего упаковывать с приложением,-->
+<!--        все уже включено. Вам просто нужно объявить (предоставленную) зависимость от JAX-RS API,-->
+<!--        чтобы иметь возможность компилировать ваше приложение.-->
+
+<!--        <dependency>-->
+<!--            <groupId>jakarta.ws.rs</groupId>-->
+<!--            <artifactId>jakarta.ws.rs-api</artifactId>-->
+<!--            <version>2.1.6</version>-->
+<!--        </dependency>-->
+
+<!--        Если вы используете какую-либо особенность Jersey, вам нужно будет напрямую зависеть от Jersey.-->
+<!--        А так же, например для работы на TomCat нужно его включать.-->
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
             <version>2.32</version>
         </dependency>
 
-
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-json-jackson</artifactId>
-            <version>2.32</version>
-        </dependency>
-
 <!--        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
-<!--        Зависимости для TomCat-->
+<!--        Зависимости для работы с TomCat-->
 
         <dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
@@ -63,13 +68,13 @@
 
 
 <!--        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
-<!--        Зависимости для GlassFish-->
 
-<!--        <dependency>-->
-<!--            <groupId>jakarta.ws.rs</groupId>-->
-<!--            <artifactId>jakarta.ws.rs-api</artifactId>-->
-<!--            <version>2.1.6</version>-->
-<!--        </dependency>-->
+<!--        Для jeson-->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>2.32</version>
+        </dependency>
 
 
 
